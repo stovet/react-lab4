@@ -9,7 +9,7 @@ function Result(giphy: Props){
 
     return (
         <div className='Result'>
-                    <div>
+                    <div className='resultDiv'>
                     {giphy.giphy.title}
                     
                     <img src={giphy.giphy.images.original.url} />
