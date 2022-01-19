@@ -17,10 +17,12 @@ body {
  input {
     width: 85%;
 }
-
+.resultsContainer {
+    width: 100%;
+}
 .Result {
     background-color: #16191d;
-    width: 50%;
+    width: 100%;
     
 }
 
@@ -51,5 +53,8 @@ ul {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+    }
+    .Result {
+        width: 50%;
     }
 }
