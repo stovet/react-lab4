@@ -1,14 +1,21 @@
 import React from 'react';
 import { Giphy } from '../models/GiphyModel';
+import ResultsList from '../components/ResultsList';
 
 interface Props {
-    search: string;
+    giphy: Giphy;
 }
-function Result(search: Props){
+function Result(giphy: Props){
 
     return (
         <div className='Result'>
-
+                    <div>
+                    {giphy.giphy.title}
+                    
+                    <img src={giphy.giphy.images.original.url} />
+                    <br />
+                    <a href={giphy.giphy.url}>link to Giphy</a> 
+                    </div>
         </div>
     )
 }

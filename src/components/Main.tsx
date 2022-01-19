@@ -9,17 +9,6 @@ function Main(){
     const [giphys, setGiphys] = useState<Giphy[]>([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    // useEffect(()=> {
-    //     fetchTrendingGiphy().then(
-    //         giphys => setGiphys(giphys)
-    //     );
-    // }, []);
-
-    // useEffect(() => {
-    //     fetchGiphy(searchTerm).then(
-    //     giphys => setGiphys(giphys)
-    // );
-    // }, []);
     useEffect(()=> {
         searchTerm ?
         fetchGiphy(searchTerm).then(
@@ -38,8 +27,9 @@ function handleSubmit(term: string){
     return (
         <div className="Main">
           <SearchForm  onSubmit={handleSubmit}/>    
+         
             <ResultsList giphy={giphys}/>
-            <Result  search={searchTerm}/>
+            
         </div>
     )
 }

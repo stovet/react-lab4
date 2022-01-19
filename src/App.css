@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color:  #d9d9d9;
+}
+.logo {
+   position: absolute;
+   top: 0px;
+   right: 0px;
+}
+.form {
+    width: auto;
+}
+.inputDiv {
+    width: 100%;
+}
+
+ input {
+    width: 85%;
+}
+
+.Result {
+    background-color: #16191d;
+    width: 50%;
+    
+}
+a {
+    color: #28b39d;
+    text-decoration: none;
+    
+}
+button {
+    background-color: #145a4f;
+    color: #fff;
+
+}
+button:hover {
+    background-color: #1a7567;
+}
+
+ul {
+    list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+    .resultsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

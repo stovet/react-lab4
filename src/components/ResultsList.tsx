@@ -1,5 +1,6 @@
 import React from 'react';
 import { Giphy, GiphyResponse } from '../models/GiphyModel';
+import Result from './Result';
 
 interface Props {
     giphy: Giphy[];
@@ -11,17 +12,13 @@ function ResultsList({giphy}: Props ){
     return (
         <div className="ResultsList">
             <p>Results</p>
-            <ul>
+            <div className='resultsContainer'>
+            
             {
                 giphy.map((giph, i) => 
-                    <li key={i} >
-                        {giph.title}
-                        <p></p>
-                        <img src={giph.images.original.url} />
-                        <a href={giph.url}>link</a> 
-                    </li>
-                )}
-                </ul>
+                <Result key={i} giphy={giph}/>
+                )}  
+                </div>
         </div>
     )
 }

@@ -1,0 +1,19 @@
+.searchBarContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20px;
+}
+button {
+    display: inline;
+}
+
+/* input[type=text] {
+max-width: 800px;
+    width: auto;
+} */
+
+.inputDiv {
+    display: flex;
+    width: 100%;
+}

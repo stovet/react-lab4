@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react';
+import './SearchForm.css';
 
 interface Props {
     onSubmit: (search: string) => void;
@@ -11,20 +12,19 @@ function SearchForm({onSubmit}: Props) {
 function handleFormSubmit(e:FormEvent){
     e.preventDefault();
     
-    // if (searchTerm === ""){
-
-   // }
-
-   // console.log(searchTerm);
     onSubmit(searchTerm)
 }
 
     return (
         <div className="SearchForm">
             <form onSubmit={handleFormSubmit}>
-                <label htmlFor="gifSearch">Search for a Gif</label>
-                <input type="text" name="gifSearch" id="gifSearch" onChange={e => setSearchTerm(e.target.value)}/>
-                <button type='submit'>Search</button>
+                <div className='searchBarContainer'>
+                    <label htmlFor="gifSearch">Search for a Gif</label>
+                    <div className='inputDiv'> 
+                        <input type="text" name="gifSearch" id="gifSearch" onChange={e => setSearchTerm(e.target.value)}/>
+                        <button type='submit'>Search</button>
+                    </div>
+                </div>
             </form>
         </div>
     )
